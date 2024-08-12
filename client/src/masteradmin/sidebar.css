@@ -1,0 +1,246 @@
+/* Sidebar CSS with namespace prefix "sidebar-" */
+.sidebar-btn {
+  position: absolute;
+  top: 5px;
+  left: 45px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background: #1b1b1b;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+}
+
+.sidebar-btn.click {
+  left: 260px;
+}
+
+.sidebar-btn span {
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+
+.sidebar-btn.click span:before {
+  content: '\f00d';
+}
+
+.sidebar-nav {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: #1b1b1b;
+  transition: left 0.4s ease;
+}
+
+.sidebar-nav.show {
+  left: 0px;
+}
+
+.sidebar-nav .sidebar-text {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #1e1e1e;
+  letter-spacing: 1px;
+}
+
+.sidebar-nav ul {
+  background: #1b1b1b;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+
+.sidebar-nav ul li {
+  margin-bottom: -2px;
+  line-height: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav ul li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-nav ul li Link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 3px solid transparent;
+}
+.sidebarlink .linklink{
+  text-decoration: none;
+  font-size: 18px;
+  margin:10px;
+}
+.bigbig{
+  margin-left: 20px;
+}
+.bigbigg{
+  margin-left: 40px;
+}
+.icononh i{
+  margin-top: 16px;
+  color: white;
+  font-size: 28px;
+}
+.icononhh i{
+  margin-top: 8px;
+  color: white;
+  font-size: 28px;
+}
+.sidebar-nav ul li.active Link {
+  color: cyan;
+  background: #1e1e1e;
+  border-left-color: cyan;
+}
+
+.sidebar-nav ul li Link:hover {
+  background: #1e1e1e;
+}
+
+.sidebar-nav ul ul {
+  position: static;
+  display: none;
+}
+
+.sidebar-nav ul .sidebar-feat-show.show {
+  display: block;
+}
+
+.sidebar-nav ul .sidebar-serv-show.show1 {
+  display: block;
+}
+
+.sidebar-nav ul ul li {
+  line-height: 42px;
+  border-top: none;
+}
+
+.sidebar-nav ul ul li Link {
+  font-size: 17px;
+  color: #e6e6e6;
+  padding-left: 80px;
+}
+
+.sidebar-nav ul li.active ul li Link {
+  color: #e6e6e6;
+  background: #1b1b1b;
+  border-left-color: transparent;
+}
+
+.sidebar-nav ul ul li Link:hover {
+  color: cyan !important;
+  background: #1e1e1e !important;
+}
+
+.sidebar-nav ul li Link span {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: transform 0.4s;
+}
+
+.sidebar-nav ul li Link span.rotate {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.sidebar-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #202020;
+  z-index: -1;
+  text-align: center;
+}
+
+.sidebar-content .sidebar-header {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.sidebar-content p {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+
+
+
+/* sideheaderbar start */
+.deleteButton {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.deleteButton svg {
+  width: 44%;
+}
+.deleteButton:hover {
+  background-color: rgb(237, 56, 56);
+  overflow: visible;
+}
+.bin path {
+  transition: all 0.2s;
+}
+.deleteButton:hover .bin path {
+  fill: #fff;
+}
+.deleteButton:active {
+  transform: scale(0.98);
+}
+.tooltip {
+  --tooltip-color: rgb(41, 41, 41);
+  position: absolute;
+  top:45px;
+  background-color: var(--tooltip-color);
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 8px 12px;
+  font-weight: 600;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.105);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.tooltip::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  content: "";
+  background-color: var(--tooltip-color);
+  bottom: 85%;
+}
+.deleteButton:hover .tooltip {
+  opacity: 1;
+}
+
+
+/* sideheaderbar end */
