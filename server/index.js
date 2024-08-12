@@ -8,16 +8,19 @@ const app = express();
 const port = 4005;
 const cookieParser = require('cookie-parser');
 const nodemailer = require('nodemailer');
+require('dotenv').config();
+
 
 app.use(cookieParser());
 app.use(cors());
 app.use(bodyParser.json());
 
-const connection = mysql.createConnection({
-    host: "103.92.235.85",
-    user: "yatayati_vrk",
-    password: "vamsee@ranjith",
-    database: "yatayati_My store database",
+
+const db = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 });
 
 connection.connect();
